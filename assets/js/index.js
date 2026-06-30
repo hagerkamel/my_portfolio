@@ -1,59 +1,4 @@
 // ^ Write your JavaScript code here
- document.addEventListener("DOMContentLoaded", function () {
-   const menuBtn = document.getElementById("menu-btn");
-   const navLinks = document.querySelector(".nav-links");
-
-   if (!menuBtn) {
-     console.log("menu-btn not found - check your button's id");
-     return;
-   }
-   if (!navLinks) {
-     console.log("nav-links not found - check your div's class");
-     return;
-   }
-
-   menuBtn.addEventListener("click", function () {
-     navLinks.classList.toggle("show");
-     console.log(
-       "clicked, show class is now:",
-       navLinks.classList.contains("show"),
-     );
-   });
- });
-// const menuBtn = document.getElementById("menu-btn");
-// const navLinks = document.querySelector(".nav-links");
-
-// menuBtn.addEventListener("click", () => {
-//   navLinks.classList.toggle("show");
-// });
-// ===== Mobile Menu Toggle =====
-// const mobileMenuBtn = document.getElementById("mobile-menu-button");
-// const navLinks = document.getElementById("nav-links");
-
-// mobileMenuBtn.addEventListener("click", () => {
-//   const isOpen = navLinks.classList.contains("flex");
-  
-//   if (isOpen) {
-//     navLinks.classList.remove("flex");
-//     navLinks.classList.add("hidden");
-//     mobileMenuBtn.setAttribute("aria-expanded", "false");
-//   } else {
-//     navLinks.classList.remove("hidden");
-//     navLinks.classList.add("flex");
-//     mobileMenuBtn.setAttribute("aria-expanded", "true");
-//   }
-// });
-
-// Close menu when a link is clicked (mobile)
-// navLinks.querySelectorAll("a").forEach((link) => {
-//   link.addEventListener("click", () => {
-//     if (window.innerWidth < 768) {
-//       navLinks.classList.remove("flex");
-//       navLinks.classList.add("hidden");
-//       mobileMenuBtn.setAttribute("aria-expanded", "false");
-//     }
-//   });
-// });
 /*=======================================================
   * Task 1 ( Nav Links trak what page open ) *
   =======================================================*/
@@ -748,3 +693,25 @@ scrollBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+// to make nav links responsive on different screens
+ document.addEventListener("DOMContentLoaded", function () {
+   const menuBtn = document.getElementById("menu-btn");
+   const navLinks = document.querySelector(".nav-links");
+
+   if (!menuBtn) {
+     console.log("menu-btn not found - check your button's id");
+     return;
+   }
+   if (!navLinks) {
+     console.log("nav-links not found - check your div's class");
+     return;
+   }
+
+   menuBtn.addEventListener("click", function () {
+     navLinks.classList.toggle("show");
+     console.log(
+       "clicked, show class is now:",
+       navLinks.classList.contains("show"),
+     );
+   });
+ });
